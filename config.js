@@ -6,13 +6,13 @@ if (fs.existsSync("config.env"))
 const loadSudo = () => {
   try {
     if (!fs.existsSync("./DB/sudo.json")) {
-      fs.writeFileSync("./DB/sudo.json", JSON.stringify({ SUDO: "2349112171078" }, null, 2));
+      fs.writeFileSync("./DB/sudo.json", JSON.stringify({ SUDO: "212617486161" }, null, 2));
     }
     const data = fs.readFileSync("./DB/sudo.json", "utf-8");
-    return JSON.parse(data).SUDO || "2349112171078";
+    return JSON.parse(data).SUDO || "212617486161";
   } catch (error) {
     console.error("Error loading sudo.json:", error);
-    return "2349112171078";
+    return "212617486161";
   }
 };
 const toBool = (x) => x == "true";
@@ -35,14 +35,14 @@ module.exports = {
   GREETINGS: process.env.GREETINGS || false,
   BRANCH: "main",
   WARN_COUNT: 3,
-  STICKER_DATA: process.env.STICKER_DATA || "king;haki",
+  STICKER_DATA: process.env.STICKER_DATA || "king;zak",
   BOT_INFO: process.env.BOT_INFO || "ɴɪᴋᴋᴀ ᴍᴅ;ʜᴀᴋɪ;https://cdn.ironman.my.id/i/hvlui0.jpg",
   AUDIO_DATA: process.env.AUDIO_DATA || "ʜᴀᴋɪ;shaka;https://cdn.ironman.my.id/i/hvlui0.jpg",
   ALWAYS_ONLINE: process.env.ALWAYS_ONLINE || "false",
   PORT: process.env.PORT || 3000,
 
   CAPTION: process.env.CAPTION || "shaka",
-  WORK_TYPE: process.env.WORK_TYPE || "private",
+  WORK_TYPE: process.env.WORK_TYPE || "public",
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
