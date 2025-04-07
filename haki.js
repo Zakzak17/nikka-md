@@ -44,7 +44,7 @@ const { File } = require("megajs");
         throw new Error("Invalid session id.");
       }
 
-      var url = "https://mega.nz/file/" + config.SESSION_ID.replace(prefix, "");
+      var url = "https://mega.nz/file/" + config.SESSION_ID.replace(prefix, "NIKKA-XDNkRhaAQ#OZVIlWg5lYVybdH_QATJV2dgTHtKA1genrvQwUgXw0E");
       var file = File.fromURL(url);
       await file.loadAttributes();
 
